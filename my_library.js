@@ -94,7 +94,74 @@ for( var i = 0; i < combined_array.length; i++){
 		x--;
 	}
 
-// Added WHILE LOOPS
+// JQUERY: An External JavaScript Library
+// Library: a collection of functions and code that someone has written to make a set of tasks easier in a specific programming language
+//By including the library in your code, you'll have access to
+// its functions and methods
+
+// to use a library for a project
+// Create a new file, my_library.js, inside the same folder as your HTML file
+// In the <Script> tags, refer to this file as a relative path as your src 
+
+// Common library problems
+// Load the page with the JavaScript console open (Command + Option + J) to see if any errors are raised when the page and library are loaded
+// Sometimes libraries conflict with each other due to similar naming conventions of functions and methods
+// You may have to remove a library or edit it to get it to work with another library
+// To check to see if a library is loaded, try calling one of its functions or methods. For instance, to make sure jQuery is loaded, just try calling jQuery in the JavaScript console
+
+// jQuery is a "write less, do more" library
+// can be marginally slower than using native JavaScript but exposes much JavaScript functionality in a very developerfriendly and cross-browser-friendly way
+// The 2.x version does not support IE6, 7 or 8 if this is important to know for your project
+
+// TO USE A JQUERY LIBRARY
+// Inside of the <head> section of your HTML file, include a copy of the jQuery library:
+// <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+// </script>
+
+// You could also just download the library and include it in your project
+// directory, referencing it relatively
+
+// The main JQUERY line MUST be BEFORE your own my_library.js file reference in the HEAD!
+
+// USE JQUERY to SELECT ELEMENTS on a page using the JavaScript console (assuming the page uses JQuery as its library)
+
+	$("body")
+
+// USE the DOLLAR SIGN as the characteristic JQuery command.
+// In the parenthesis write, in quotes, the name of the desired element
+
+// The console should return an Array with selected elements:
+// >[><body>...</body>]
+
+// You can use an element name, class (remember the . at beginning) or id (#)
+
+	$("ul li")
+
+// Note the above is to select the LINE ITEM INSIDE the unordered list, not the list itself.
+
+// MONITORING FOR EVENTS with JavaScript
+// For instance, we could monitor for a click event on a <button> element to fire a specific snippet of code
 
 
+// THE FOLLOWING IS VERY VERY IMPORTANT!
+// $(document).ready() snippet must always be at the TOP of your my_library file!
+// This snippet ensures that your code doesn't run until your document fires a ready event
+// The ready event fires when all of the page's DOM elements are loaded, even if multimedia elements aren't fully loaded
+// By encapsulating all of our jQuery code to only run when the document is ready, the elements you're selecting will definitely be on the page when you access them
 
+// Anonymous functions - write functions that make them a "first class citizen" data type, meaning they can be:
+// given as an argument to a function (yes, a function taking a function)
+// returned by a function or block of code
+// assigned to a variable
+
+// SYTNAX FOR ANONYMOUS FUNCTIONS
+
+// function(){
+// alert("This is an anonymous function");
+// }
+// Anonymous functions can be stored in variables:
+// var my_anon_func = function(){ alert("Har!"); }
+
+// IN a mylibrary.js file, THE ABOVE SYNTAX APPEARS NESTED UNDER THE DOCUMENT READY SNIPPET
+
+Callback: an anonymous function supplied to another function to be run when that function is done running
