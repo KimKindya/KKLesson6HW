@@ -162,6 +162,33 @@ for( var i = 0; i < combined_array.length; i++){
 // Anonymous functions can be stored in variables:
 // var my_anon_func = function(){ alert("Har!"); }
 
-// IN a mylibrary.js file, THE ABOVE SYNTAX APPEARS NESTED UNDER THE DOCUMENT READY SNIPPET
+//IN a mylibrary.js file, THE ABOVE SYNTAX APPEARS NESTED UNDER THE DOCUMENT READY SNIPPET
 
-Callback: an anonymous function supplied to another function to be run when that function is done running
+// CALLBACK: an anonymous function supplied to another function to be run when that function is done running
+
+// EXAMPLE OF A CALLBACK
+// Define an anonymous function called someOtherFunction
+
+	var mysteryFunction = function(){ alert('hello world'); }
+
+// Declare a regular or anonymous function that takes another function as an argument, does something, then runs that other function
+
+	function otherFunction(anyFunction){ console.log(3+5); anyFunction(); }
+
+// Call the regular function, supplying the initial
+// anonymous function as an argument
+
+	otherFunction(mysteryFunction);
+
+// THE FOLLOWING IS ALSO VERY IMPORTANT!
+// To use $(document).ready() and ensure the page is ready for your jQuery, you'll need to pass it an anonymous function (a callback) to execute when the document is ready
+
+$(document).ready(
+
+//Code that executes when the document is ready function(){
+
+alert("Document Ready!);
+}
+);
+
+// See index page and new my_library.js file for examples of "The Fun Stuff" or, "JQUery events"
