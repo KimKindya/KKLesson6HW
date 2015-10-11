@@ -44,8 +44,23 @@ $(document).ready(function(){
 	}
 	);
 
+	// Here's an example of one animation triggering another when it's done, using an anonymous function as a callback:
+	
+	var animateBox = function(){
 
+	$(".aniBox1").animate( {
+	opacity: .1,
+	width: "100%"
+	}, 5000)
+	}
 
+	$(".aniBox1").show(animateBox)
+
+	// Same command as above, with simplified syntax
+
+	// $(".aniBox1").show( animateBox(){
+	// $(".aniBox1").animate( {opacity: .1, width:"100%"} 5000)
+	// })
 
 
 
