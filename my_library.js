@@ -12,6 +12,13 @@ $(document).ready(function(){
 
 	$("h1").show(3000);
 
+	// These will make the image of jupiter fade in and out over 4 seconds
+
+	$("img").fadeOut(4000);
+
+	$("img").fadeIn(4000);
+
+
 
 
 
