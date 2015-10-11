@@ -18,11 +18,31 @@ $(document).ready(function(){
 
 	$("img").fadeIn(4000);
 
-// This makes the first paragraph with pink text hide by sliding, then coming back over 5 seconds
+	// This makes the first paragraph with pink text hide by sliding upwards, then coming back over 5 seconds
 
 	$(".para1").slideUp(5000);
 	
 	$(".para1").slideDown(5000);
+
+	// this animates the blue box with the second paragraph, changing its opacity and width over 4 seconds
+
+	$(".para2").animate({
+	opacity: 0.25,
+	width: "100%"
+	} , 4000 );
+
+	$(".para2").animate({
+	opacity: 100,
+	width: "50%"
+	} , 4000 );
+
+	// This creates a click event when user clicks on the aqua box 
+
+	$(".clickMe").click(
+	function(){
+	alert("You Clicked the Box!");
+	}
+	);
 
 
 
