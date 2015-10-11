@@ -29,21 +29,72 @@
 
 // The result in the console is that you will see the numbers 1 to 12 appear
 
-// EXAMPLE OF A FOR LOOP, using ITEMS IN AN ARRAY
+// EXAMPLE OF A FOR LOOP, using STRINGS IN AN ARRAY
 
 	cats = ["tabby", "siamese", "persian"]
 	for(var i = 0; i< cats.length; i++){
 	console.log(cats[i])
 	}
 
-// Here, we define an array with 3 strings
+// Here, we define an array containing 3 strings
 // Again, we define a variable representing the number of iterations, which starts with 0
-// the iterations will repeat NOW for the number of items in the array, represented by cats.length, here being 3
+// the iterations will repeat NOW for the number of strings in the array, represented by cats.length, here being 3
 // i++ again means add 1 to each iteration
-// the console will show the current item in the array corresponding to the position in the array
-// when i is no longer less than the number of items in the array (3) the loop stops
+// the console will show the current string in the array corresponding to the position in the array
+// when i is no longer less than the number of strings in the array (3) the loop stops
 // the console will print out each cat type in order
 
+
+// EXAMPLE OF NESTED LOOPS
+
+// We create an array filled with 2 arrays. Inside of each array are several strings.
+
+	var insects_array = ["butterfly", "bee", "beetle"];
+
+	var fish_array = ["tuna", "flounder", "halibut"];
+
+	var combined_array = [insects_array, fish_array];
+
+// In order to display the information (strings) inside of each of these arrays (in the console) we need to create two NESTED loops
+
+// The first, outer loop keeps track of the total number of items The outer loop will repeat for the number of times equal to the combined array's length (6)the combined array using variable i
+// The outer loop will repeat for the number of times equal to the combined array's length (6)
+
+// The second, inner loop is keeping track of the items in each individual array. It "freezes" the outer loop each time it repeats.
+// During the "Freeze" in each iteration of outer loop, the second loop is stopping to count the number of items in each of the component arrays using j
+// When the inner loop displays the strings in the component arrays, the outer loop resumes until everything is counted and printed
+
+	
+for( var i = 0; i < combined_array.length; i++){
+
+
+		for( var j = 0; j < combined_array[i].length; j++){
+			console.log(combined_array[i][j]);
+		}
+
+// EXAMPLE OF A WHILE LOOP -- repeating the code until a condition is met
+
+	x = 5;
+
+	while(x < 15){
+		console.log("x is currently " + x);
+		x++;
+	}	
+
+// Here, we start at 5, and add 1 to it in each iteration. As long as the total value is LEss THAN 15, 
+// the loop will repeat
+// When the condition is met that the value is 15, the loop will stop.
+
+// A While loop can also be used to count DOWN using the minus-minus command
+
+	x = 10;
+
+	while( x >= 0 ){
+		console.log(x + "little indians");
+		x--;
+	}
+
+// Added WHILE LOOPS
 
 
 
