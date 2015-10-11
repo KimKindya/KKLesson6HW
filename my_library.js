@@ -18,6 +18,13 @@ $(document).ready(function(){
 
 	$("img").fadeIn(4000);
 
+// This makes the first paragraph with pink text hide by sliding, then coming back over 5 seconds
+
+	$(".para1").slideUp(5000);
+	
+	$(".para1").slideDown(5000);
+
+
 
 
 
